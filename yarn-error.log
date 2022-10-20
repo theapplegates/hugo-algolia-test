@@ -1,0 +1,108 @@
+Arguments: 
+  /Users/thor3/.nvm/versions/node/v16.17.0/bin/node /opt/homebrew/bin/yarn install
+
+PATH: 
+  /Users/thor3/Library/pnpm:/Users/thor3/.bun/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/Users/thor3/.nvm/versions/node/v16.17.0/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin:/Library/Apple/usr/bin:/Users/thor3/.cargo/bin:/opt/homebrew/include/:/opt/homebrew/Cellar/gmp/6.2.1_1/include/gmp.h
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: Failed to replace env in config: ${GITHUB_PACKAGE_TOKEN}
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:94933:13
+      at String.replace (<anonymous>)
+      at envReplace (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:94928:16)
+      at Function.normalizeConfig (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:31938:69)
+      at NpmRegistry.<anonymous> (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:31968:34)
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "hugo-congo-theme",
+    "version": "2.3.1",
+    "description": "Congo theme for Hugo",
+    "scripts": {
+      "preinstall": "rimraf assets/vendor",
+      "postinstall": "vendor-copy",
+      "assets": "rimraf assets/vendor && vendor-copy",
+      "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
+      "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
+      "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ -p 8008",
+      "lighthouse": "lhci autorun"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jpanther/congo.git"
+    },
+    "keywords": [
+      "hugo",
+      "hugo-theme",
+      "tailwind",
+      "dark-mode"
+    ],
+    "author": "James Panther",
+    "funding": "https://github.com/sponsors/jpanther",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/jpanther/congo/issues"
+    },
+    "homepage": "https://github.com/jpanther/congo#readme",
+    "devDependencies": {
+      "@tailwindcss/typography": "^0.5.4",
+      "chart.js": "^3.9.1",
+      "fuse.js": "^6.6.2",
+      "katex": "^0.16.0",
+      "mermaid": "^9.1.6",
+      "prettier": "^2.7.1",
+      "prettier-plugin-go-template": "^0.0.13",
+      "prettier-plugin-tailwindcss": "^0.1.13",
+      "rimraf": "^3.0.2",
+      "tailwindcss": "^3.1.8",
+      "vendor-copy": "^3.0.1"
+    },
+    "vendorCopy": [],
+    "devVendorCopy": [
+      {
+        "from": "node_modules/mermaid/dist/mermaid.min.js",
+        "to": "assets/lib/mermaid/mermaid.min.js"
+      },
+      {
+        "from": "node_modules/chart.js/dist/chart.min.js",
+        "to": "assets/lib/chart/chart.min.js"
+      },
+      {
+        "from": "node_modules/katex/dist/katex.min.js",
+        "to": "assets/lib/katex/katex.min.js"
+      },
+      {
+        "from": "node_modules/katex/dist/katex.min.css",
+        "to": "assets/lib/katex/katex.min.css"
+      },
+      {
+        "from": "node_modules/katex/dist/contrib/auto-render.min.js",
+        "to": "assets/lib/katex/auto-render.min.js"
+      },
+      {
+        "from": "node_modules/katex/dist/fonts/",
+        "to": "assets/lib/katex/fonts/"
+      },
+      {
+        "from": "node_modules/fuse.js/dist/fuse.min.js",
+        "to": "assets/lib/fuse/fuse.min.js"
+      }
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
