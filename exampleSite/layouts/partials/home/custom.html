@@ -6,3 +6,15 @@
   {{ partial "partials/home/profile.html" . }}
 </div>
 <script defer type="text/javascript" src="{{ $jsHome.RelPermalink }}" integrity="{{ $jsHome.Data.Integrity }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+  apiKey: 'b5da4e939a4c9ec89f72e7b230340f4a',
+  indexName: 'hugo',
+  appId: '9WSL1UK155',
+  inputSelector: '.docsearch-input',
+  debug: false,
+  });
+</script>
+<input type="search" class="docsearch-input" placeholder="Search" />
