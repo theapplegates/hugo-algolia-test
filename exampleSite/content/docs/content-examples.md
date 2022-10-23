@@ -8,6 +8,21 @@ tags: ["content", "example"]
 ---
 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+  apiKey: 'b5da4e939a4c9ec89f72e7b230340f4a',
+  indexName: 'hugo',
+  appId: '9WSL1UK155',
+  inputSelector: '.docsearch-input',
+  debug: false,
+  });
+</script>
+<input type="search" class=".docsearch-input" placeholder="Search" />
+
+
+
 If you've been reading the documentation in order, you should now know about all the features and configurations available in Congo. This page is designed to pull everything together and offer some worked examples that you might like to use in your Hugo project.
 
 {{< alert >}}
